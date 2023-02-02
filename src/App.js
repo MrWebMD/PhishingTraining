@@ -1,4 +1,3 @@
-import Logo from "./Components/Layout/Logo";
 
 function App() {
   return (
@@ -14,7 +13,7 @@ function App() {
           <article>
             <h4 className="contentHeading">Phishing Basics</h4>
             <section className="sectionGrid sectionGrid--2col pageBoundary">
-              <div className="sectionGrid__cell sectionGrid__cell--outline">
+              <div className="sectionGrid__cell">
                 <h2 className="contentHeading">Lorem ipsum dolor</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud <span className="highlight">exercitation ullamco laboris nisi</span> ut aliquip ex ea commodo consequat.</p>
                 <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
