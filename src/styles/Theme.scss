@@ -1,0 +1,152 @@
+/** Color scheme definitions **/
+
+@import "variables";
+@import "mixins";
+
+/** Fonts **/
+
+@font-face {
+  font-family: "Google Sans Regular";
+  src: url("./fonts/Google-Sans/Google-Sans-Regular.woff2");
+}
+
+@font-face {
+  font-family: "Google Sans Bold";
+  src: url("./fonts/Google-Sans/Google-Sans-Bold.woff2");
+}
+
+body {
+  font-family: "Google Sans Regular";
+  color: white;
+  background-color: $theme-color-dark1;
+  padding: 0;
+  margin: 0;
+  font-size:1.1rem;
+}
+.websiteLogo {
+  width: 175px;
+}
+.pageBoundary {
+  max-width: 1200px;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  margin: 0 auto;
+}
+/** Page headers **/
+.superHeader {
+  min-height: 60vh; 
+  display: flex;
+  align-items: center;
+}
+.superHeader__contentWrapper {
+  flex-direction: column;
+  justify-content: center;
+}
+
+/** End Page Headers **/
+
+/** Title tags **/
+
+.contentHeading {
+  font-weight: 100;
+}
+
+.contentHeading--bold {
+  font-weight: 600;
+}
+
+h1.contentHeading {
+  font-size: 3rem;
+}
+
+h2.contentHeading {
+  font-size: 2.5rem;
+}
+
+h3.contentHeading {
+  font-size: 1.5rem;
+}
+
+h4.contentHeading {
+  text-align: center;
+  border-top: 1px solid $theme-color-dark2;
+  border-bottom: 1px solid $theme-color-dark2;
+  padding:1rem;
+}
+
+.caption {
+  color: $theme-color-text-mid2;
+  font-size: 1rem;
+}
+
+/** End title tags **/
+
+/** Buttons **/
+
+.btn {
+  padding: 0.75rem 1.25rem;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+.btn--outline {
+  background: none;
+  border: 3px solid $theme-color-action1;
+  color: $theme-color-action1;
+}
+
+/** End Buttons **/
+
+.sectionGrid {
+  display: grid;
+  padding-top:3rem;
+  padding-bottom: 3rem;
+  gap: 2rem;
+}
+.sectionGrid__cell {
+  padding: 1rem;
+}
+.sectionGrid__cell--outline {
+  border: 2px solid $theme-color-action2;
+  border-radius: 20px;
+}
+.sectionGrid__image {
+  margin: 2rem 0rem;
+}
+.sectionGrid--2col {
+  grid-template-columns: 1fr 1fr;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.highlight {
+  background-color: $theme-color-highlight;
+  color: black;
+  padding: 2px 4px;
+}
+@include mobile() {
+  .pageBoundary {
+    padding: 1rem;
+  }
+  .sectionGrid {
+    grid-template-columns: 1fr;
+  }
+  .sectionGrid__image {
+    width: 100%;
+  }
+  .sectionGrid--reverseOnMobile {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .sectionGrid__cell--outline {
+    border: 0px;
+  }
+  .btn--fullWidthOnMobile {
+    width: 100%;
+  }
+
+}
+
+@import "Navigation.scss";
+@import "Footer.scss";
