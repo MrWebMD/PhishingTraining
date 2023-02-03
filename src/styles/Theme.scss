@@ -24,6 +24,7 @@ body {
   padding: 0;
   margin: 0;
   font-size:1.1rem;
+  overflow-x: hidden;
 }
 p {
   line-height: 1.4rem;
@@ -50,6 +51,15 @@ p {
 
 /** End Page Headers **/
 
+.display-none {
+  display: none;
+}
+.filter-brightness-hover {
+  transition: filter 0.3s ease-in-out 0s; 
+}
+.filter-brightness-hover:hover {
+  filter: brightness(1.4);
+}
 /** Title tags **/
 
 .contentHeading {
@@ -58,6 +68,14 @@ p {
 
 .contentHeading--bold {
   font-weight: 600;
+}
+.contentHeading__citation {
+  font-size: 1rem;
+}
+
+.link.link--underlined{
+  color: $theme-color-action2;
+  text-underline-offset: 6px;
 }
 
 h1.contentHeading {
@@ -129,7 +147,41 @@ h4.contentHeading {
   background-color: $theme-color-highlight;
   color: black;
   padding: 2px 4px;
+  margin-left: 5px;
+  margin-right: 5px;
 }
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  // visibility: hidden;
+  opacity: 0;
+  width: 120px;
+  background-color: $theme-color-dark2;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px;
+  transition: opacity 0.3s ease-in-out 0.2s;
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+.tooltip .tooltiptext {
+  width: 300px;
+  bottom: calc(100% + 10px);
+  left: 0;
+  // margin-left: -60px; /* Use half of the width (120/2 = 60), to center the tooltip */
+}
+.tooltip:hover .tooltiptext, .tooltiptext:hover {
+  // visibility: hidden;
+  opacity: 1;
+}
+
 @include mobile() {
   .pageBoundary {
     padding: 1rem;
@@ -150,8 +202,12 @@ h4.contentHeading {
   .btn--fullWidthOnMobile {
     width: 100%;
   }
+  body {
+    background: $theme-color-dark1;
+  }
 
 }
 
 @import "Navigation.scss";
 @import "Footer.scss";
+@import "AddressBar.scss";

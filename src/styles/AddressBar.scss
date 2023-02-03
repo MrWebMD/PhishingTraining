@@ -1,0 +1,62 @@
+.addressBar {
+  background-color: $theme-color-dark2;
+  &__innerWrapper {
+    display: flex;
+    flex-direction: row;
+    padding:0.5rem 2rem;
+    align-items: center;
+    gap: 15px;
+  }
+  &__buttons {
+    font-size: 1.4rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    color: $theme-color-action2;
+  }
+  &__searchBox {
+    background-color: $theme-color-dark1;
+    border-radius:50px;
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-grow: 1;
+    min-width: 0;
+  }
+  
+  &__searchBoxIcon {
+    font-size: 1.4rem;
+    color: $theme-color-action1;
+    cursor:pointer;
+  }
+  &__urlWrapper {
+    overflow-x: auto;
+  }
+  &__urlWrapper::-webkit-scrollbar {
+  }
+  &__typedValue {
+    font-size: 1rem;
+    padding: 0;
+    margin: 0;
+    line-height: 1.5rem;
+    color: $theme-color-action2;
+    white-space: nowrap;
+    font-weight: 100;
+  }
+}
+
+@include mobile() {
+  .addressBar {
+    &__buttons {
+      display: none;
+    }
+    &__innerWrapper {
+      display: flex;
+      flex-direction: row;
+      padding:0.5rem 0.5rem;
+      align-items: center;
+      gap: 15px;
+    }
+  }
+}

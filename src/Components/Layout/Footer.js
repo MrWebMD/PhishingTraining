@@ -2,8 +2,8 @@ import Logo from "./Logo";
 
 const Footer = () => {
   return <footer className="footer">
-    <div class="pageBoundary footer__itemsGrid">
-      <div class="footer__logo">
+    <div className="pageBoundary footer__itemsGrid">
+      <div className="footer__logo">
         <Logo/>
       </div>
       <ul className="footer__items">
