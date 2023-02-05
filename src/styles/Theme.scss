@@ -18,8 +18,8 @@
 body {
   font-family: "Google Sans Regular";
   color: white;
-  // background: url("../images/blob-bg.png"), $theme-color-dark4;
-  background: $theme-color-dark4;
+  background: url("../images/blob-bg.png"), $theme-color-dark4;
+  // background: $theme-color-dark4;
   background-size: cover;
   background-repeat: no-repeat;
   padding: 0;
@@ -193,6 +193,9 @@ h4.contentHeading {
 }
 
 @include mobile() {
+  body {
+    background: $theme-color-dark4;
+  }
   .pageBoundary {
     padding: 1rem;
   }
