@@ -18,16 +18,17 @@
 body {
   font-family: "Google Sans Regular";
   color: white;
-  background: url("../images/blob-bg.png"), $theme-color-dark1;
+  // background: url("../images/blob-bg.png"), $theme-color-dark4;
+  background: $theme-color-dark4;
   background-size: cover;
   background-repeat: no-repeat;
   padding: 0;
   margin: 0;
-  font-size:1.1rem;
+  font-size: 1.1rem;
   overflow-x: hidden;
 }
 p {
-  line-height: 1.4rem;
+  line-height: 1.8rem;
 }
 .websiteLogo {
   width: 175px;
@@ -40,7 +41,7 @@ p {
 }
 /** Page headers **/
 .superHeader {
-  min-height: 60vh; 
+  min-height: 60vh;
   display: flex;
   align-items: center;
 }
@@ -55,7 +56,7 @@ p {
   display: none;
 }
 .filter-brightness-hover {
-  transition: filter 0.3s ease-in-out 0s; 
+  transition: filter 0.3s ease-in-out 0s;
 }
 .filter-brightness-hover:hover {
   filter: brightness(1.4);
@@ -64,8 +65,8 @@ p {
 
 .contentHeading {
   font-weight: 100;
+  overflow-wrap: break-word;
 }
-
 .contentHeading--bold {
   font-weight: 600;
 }
@@ -73,7 +74,7 @@ p {
   font-size: 1rem;
 }
 
-.link.link--underlined{
+.link.link--underlined {
   color: $theme-color-action2;
   text-underline-offset: 6px;
 }
@@ -94,7 +95,7 @@ h4.contentHeading {
   text-align: center;
   border-top: 1px solid $theme-color-dark2;
   border-bottom: 1px solid $theme-color-dark2;
-  padding:1rem;
+  padding: 1rem;
 }
 
 .caption {
@@ -121,8 +122,8 @@ h4.contentHeading {
 
 .sectionGrid {
   display: grid;
-  padding-top:3rem;
-  padding-bottom: 3rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   gap: 2rem;
 }
 .sectionGrid__cell {
@@ -150,15 +151,23 @@ h4.contentHeading {
   margin-left: 5px;
   margin-right: 5px;
 }
-
+.wrapText {
+  overflow-wrap: anywhere;
+}
 .tooltip {
   position: relative;
   display: inline-block;
   border-bottom: 1px dotted black;
 }
-
+.tooltip--centerVertically {
+  margin-top: -10px;
+  position: absolute;
+  display: inline-block;
+}
+.tooltiptext {
+  visibility: hidden;
+}
 .tooltip .tooltiptext {
-  // visibility: hidden;
   opacity: 0;
   width: 120px;
   background-color: $theme-color-dark2;
@@ -177,8 +186,9 @@ h4.contentHeading {
   left: 0;
   // margin-left: -60px; /* Use half of the width (120/2 = 60), to center the tooltip */
 }
-.tooltip:hover .tooltiptext, .tooltiptext:hover {
-  // visibility: hidden;
+.tooltip:hover .tooltiptext,
+.tooltiptext:hover {
+  visibility: visible;
   opacity: 1;
 }
 
@@ -202,12 +212,10 @@ h4.contentHeading {
   .btn--fullWidthOnMobile {
     width: 100%;
   }
-  body {
-    background: $theme-color-dark1;
-  }
-
 }
 
 @import "Navigation.scss";
 @import "Footer.scss";
 @import "AddressBar.scss";
+@import "Email.scss";
+@import "Spinners-loaders.scss";

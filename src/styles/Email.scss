@@ -1,0 +1,45 @@
+.email {
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  &__subjectHeading {
+    padding-bottom: 1.5rem;
+    border-bottom: 2px solid $theme-color-dark4;
+    margin: 1rem 0rem 0rem 0rem;
+  }
+  &__innerWrapper {
+    border: 2px solid $theme-color-action1;
+    padding: 1rem;
+    border-radius: 15px;
+    background-color: $theme-color-dark3;
+  }
+  &__metaData {
+    border-bottom: 2px solid $theme-color-dark4;
+  }
+  &__metaRow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__wrapText {
+    overflow-wrap: anywhere;
+  }
+  &__fieldTitle {
+    margin: 0.2rem 0rem;
+  }
+  &__icon {
+    padding: 0px 5px;
+    color: $theme-color-text-dim;
+  }
+}
+
+@include mobile() {
+  .email {
+    padding: 0;
+    &__innerWrapper {
+      padding: 1rem;
+    }
+  }
+}

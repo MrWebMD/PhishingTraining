@@ -2,11 +2,13 @@ import Footer from "./Footer";
 import Navigation from "./Navigation";
 
 const Layout = (props) => {
-  return <>
-    <Navigation/>
+  return (
+    <>
+      <Navigation />
       {props.children}
-    <Footer/>
-  </>
-}
+      <Footer />
+    </>
+  );
+};
 
 export default Layout;
