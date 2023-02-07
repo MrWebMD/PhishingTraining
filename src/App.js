@@ -53,7 +53,7 @@ function App() {
       <main>
         <article>
           {/* <h4 className="contentHeading">Phishing Basics</h4> */}
-          <AddressBar url={`https://${window.location.host}#learn-the-basics`} tag="learn-the-basics" />
+          <AddressBar url={`${window.location.protocol}//${window.location.host}#learn-the-basics`} tag="learn-the-basics" />
           <section className="sectionGrid sectionGrid--2col pageBoundary" data-aos="fade-right">
             <div className="sectionGrid__cell">
               <h2 className="contentHeading">What is phishing?</h2>

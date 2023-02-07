@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronLeft, faChevronRight, faRotateRight, faInfoCircle, faShare } from "@fortawesome/free-solid-svg-icons";
+import { faChevronLeft, faChevronRight, faRotateRight, faInfoCircle, faShare, faCopy, faHashtag } from "@fortawesome/free-solid-svg-icons";
 import { Store } from "react-notifications-component";
 
 import copy from "copy-to-clipboard";
@@ -24,7 +24,7 @@ const AddressBar = ({ url, tag }) => {
   };
 
   return (
-    <div className="addressBar">
+    <div className="addressBar" id={tag}>
       <div className="addressBar__innerWrapper pageBoundary">
         <div className="addressBar__buttons">
           <FontAwesomeIcon icon={faChevronLeft} />
@@ -34,10 +34,10 @@ const AddressBar = ({ url, tag }) => {
         <div className="addressBar__searchBox tooltip">
           <span className="tooltiptext">{url}</span>
           <div className="addressBar__searchBoxIcon filter-brightness-hover">
-            <FontAwesomeIcon icon={faShare} onClick={copyHandler} />
+            <FontAwesomeIcon icon={faHashtag} onClick={copyHandler} />
           </div>
           <div className="addressBar__urlWrapper">
-            <h6 className="addressBar__typedValue" onClick={copyHandler} id={tag}>
+            <h6 className="addressBar__typedValue" onClick={copyHandler}>
               {url}
             </h6>
           </div>
