@@ -1,7 +1,15 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faBook, faEnvelopeOpen, faHeartPulse, faPhone, faSms, faSuitcase } from "@fortawesome/free-solid-svg-icons";
+import {
+  faBars,
+  faBook,
+  faEnvelopeOpen,
+  faHeartPulse,
+  faPhone,
+  faSms,
+  faSuitcase,
+} from "@fortawesome/free-solid-svg-icons";
 import Logo from "./Logo";
-
+import Link from "next/link";
 const Navigation = () => {
   return (
     <nav className="navigation pageBoundary">
@@ -17,31 +25,41 @@ const Navigation = () => {
         <div className="navigation__spacer"></div>
       </div>
       <div className="navigation__itemsWrapper">
-        <input type="checkbox" id="navigation__checkbox" className="navigation__checkbox" />
+        <input
+          type="checkbox"
+          id="navigation__checkbox"
+          className="navigation__checkbox"
+        />
         <ul className="navigation__items">
           <li className="navigation__item">
-            <FontAwesomeIcon icon={faEnvelopeOpen} />
-            <a className="navigation__link">Email</a>
-          </li>
-          <li className="navigation__item">
             <FontAwesomeIcon icon={faPhone} />
-            <a className="navigation__link">Vishing</a>
+            <Link href="/vishing" className="navigation__link">
+              Vishing
+            </Link>
           </li>
           <li className="navigation__item">
             <FontAwesomeIcon icon={faSms} />
-            <a className="navigation__link">Smishing</a>
+            <Link href="/smishing" className="navigation__link">
+              Smishing
+            </Link>
           </li>
           <li className="navigation__item">
             <FontAwesomeIcon icon={faSuitcase} />
-            <a className="navigation__link">Whaling</a>
+            <Link href="whaling" className="navigation__link">
+              Whaling
+            </Link>
           </li>
           <li className="navigation__item">
             <FontAwesomeIcon icon={faHeartPulse} />
-            <a className="navigation__link">I've been phished</a>
+            <Link href="ive-been-phished" className="navigation__link">
+              I've been phished
+            </Link>
           </li>
           <li className="navigation__item">
             <FontAwesomeIcon icon={faBook} />
-            <a className="navigation__link">Skills Test</a>
+            <Link href="skills-test" className="navigation__link">
+              Skills Test
+            </Link>
           </li>
         </ul>
       </div>

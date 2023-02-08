@@ -27,6 +27,9 @@ body {
   font-size: 1.1rem;
   overflow-x: hidden;
 }
+.bg-theme-color-dark3 {
+  background-color: $theme-color-dark3;
+}
 p {
   line-height: 1.8rem;
 }
@@ -49,7 +52,9 @@ p {
   flex-direction: column;
   justify-content: center;
 }
-
+.pageSection {
+  margin: 4rem 0rem;
+}
 /** End Page Headers **/
 
 .display-none {
@@ -151,13 +156,23 @@ h4.contentHeading {
   margin-left: 5px;
   margin-right: 5px;
 }
+.list {
+  max-width: 500px;
+  margin: 0 auto;
+}
+.list--large li {
+  margin: 1rem 0rem;
+}
+.list--large {
+  font-size: 1.5rem;
+}
 .wrapText {
   overflow-wrap: anywhere;
 }
 .tooltip {
   position: relative;
   display: inline-block;
-  border-bottom: 1px dotted black;
+  // border-bottom: 1px dotted black;
 }
 .tooltip--centerVertically {
   margin-top: -10px;

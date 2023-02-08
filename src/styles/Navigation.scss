@@ -1,10 +1,11 @@
 .navigation {
   display: flex;
   flex-direction: row;
-  border-bottom: 1px solid rgba(255,255,255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
-  &__mobileMenu, &__logoWrapper {
+  &__mobileMenu,
+  &__logoWrapper {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -28,11 +29,12 @@
     display: none;
   }
   &__item {
-    color: $theme-color-text-mid;
     white-space: nowrap;
   }
   &__link {
+    color: $theme-color-text-mid;
     margin-left: 10px;
+    text-decoration: none;
   }
   &__spacer {
   }

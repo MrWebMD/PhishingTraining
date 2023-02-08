@@ -1,5 +1,13 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronLeft, faChevronRight, faRotateRight, faInfoCircle, faShare, faCopy, faHashtag } from "@fortawesome/free-solid-svg-icons";
+import {
+  faChevronLeft,
+  faChevronRight,
+  faRotateRight,
+  faInfoCircle,
+  faShare,
+  faCopy,
+  faHashtag,
+} from "@fortawesome/free-solid-svg-icons";
 import { Store } from "react-notifications-component";
 
 import copy from "copy-to-clipboard";
