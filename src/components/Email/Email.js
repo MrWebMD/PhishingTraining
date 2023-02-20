@@ -1,11 +1,16 @@
-import { faChevronDown, faInbox, faLock, faStar } from "@fortawesome/free-solid-svg-icons";
+import {
+  faChevronDown,
+  faInbox,
+  faLock,
+  faStar,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const Email = ({ from, time, to, toName, subject, children }) => {
+const Email = ({ from, fromName, time, to, toName, subject, children }) => {
   return (
     <div className="email">
       <div className="email__innerWrapper">
-        <h1 className="email__subjectHeading">Account Activation</h1>
+        <h1 className="email__subjectHeading">{subject}</h1>
         <div className="email__metaData">
           <div className="email__metaRow email__wrapText">
             <div>
@@ -24,7 +29,9 @@ const Email = ({ from, time, to, toName, subject, children }) => {
           <div className="email__metaRow">
             <p className="email__toName email__fieldTitle">
               <strong>To:</strong>&nbsp;
-              <span className="email__toEmail email__wrapText">{to}</span>
+              <span className="email__toEmail email__wrapText">
+                {toName}&lt;{to}&gt;
+              </span>
             </p>
             <div></div>
 

@@ -4,6 +4,8 @@ import Super from "@/components/Layout/Super";
 import AddressBar from "@/components/Layout/AddressBar";
 import { useRouter } from "next/router";
 import Email1 from "@/components/Phishing/Email1";
+import Email from "@/components/Email/Email";
+import Link from "next/link";
 
 export default function Home() {
   const router = useRouter();
@@ -127,14 +129,100 @@ export default function Home() {
           <section className="pageSection">
             <div className="pageBoundary">
               <h2 className="contentHeading text-align-center">
-                There are 5 simple steps that you can take to protect yourself
-                from all forms of phishing.
+                There are 3 simple steps that you can take to protect yourself
+                from phishing emails.
               </h2>
               <p className="text-align-center"></p>
-              <ol className="list list--large text-align-center">
+              <ol className="list list--large">
+                <li>Avoid clicking links</li>
+                <p>
+                  Whenever possible instead of clicking on a link within an
+                  email or text message, manually type the address of the
+                  website you know is real. Often times your browser will
+                  autofill the correct address for you. This will limit your
+                  exposure to potentially spoofed website domains.
+                </p>
+                <div className="text-align-center">
+                  <img
+                    src="/images/browser-auto-complete.gif"
+                    alt="Browser autofills website address"
+                    className="image image--max-width-100"
+                  />
+                </div>
                 <li>Verify the sender</li>
-                <li> </li>
+
+                {/* <Email
+                  from={
+                    <span className="wrapText">
+                      accounts@google-account-alert.com
+                    </span>
+                  }
+                  fromName="Google"
+                  time="2:09 PM"
+                  to="jessicak@gmail.com"
+                  toName="Jessica Kimberly"
+                  subject="Your password has been reset"
+                /> */}
+                <p>
+                  An email can be verified by matching the senders email address
+                  with what you know is reputable. For example
+                  no-reply@google-account-alert.com would be an email address an
+                  attacker would use. no-reply@google.com is an official google
+                  email address because it ends with google.com with no
+                  revisions.
+                </p>
+                <p>
+                  You can learn more from this{" "}
+                  <a
+                    href="https://support.google.com/mail/answer/8253?hl=en"
+                    target="_blank"
+                    className="link link--underlined"
+                  >
+                    google support article
+                  </a>
+                  .
+                </p>
+                <div className="text-align-center">
+                  <img
+                    src="/images/verify-the-sender-1.gif"
+                    alt="Browser autofills website address"
+                    width="700px"
+                    className="image image--max-width-100"
+                  />
+                </div>
+
+                <li>Be skeptcial of impersonal messages</li>
+                <p>
+                  Phishing emails and text messages are sent on a massive scale,
+                  reaching the inboxes of thousands of people. This often leads
+                  to phishing attempts being very impersonal. When a message
+                  calls for you to provide personally identifiable information
+                  or does not at least include some your own basic info, then
+                  avoid interacting with it.
+                </p>
               </ol>
+            </div>
+          </section>
+          <section className="pageSection bg-theme-color-dark3">
+            <div className="pageBoundary">
+              <h3 className="contentHeading contentHeading--bold">
+                There was an estimated 66 billion robotic text made in 2022
+                according to the{" "}
+                <a
+                  href="https://www.robokiller.com/the-robokiller-report"
+                  target="_blank"
+                >
+                  2022 Robokiller Report
+                </a>
+              </h3>
+              <h2 className="contentHeading">
+                Learn smishing, phishing in the form of text messages
+              </h2>
+              <Link href="/smishing">
+                <button className="btn btn--outline btn--fullWidthOnMobile filter-brightness-hover">
+                  Smishing
+                </button>
+              </Link>
             </div>
           </section>
         </article>

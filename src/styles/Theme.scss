@@ -54,6 +54,7 @@ p {
 }
 .pageSection {
   margin: 4rem 0rem;
+  padding: 2rem 0rem;
 }
 /** End Page Headers **/
 
@@ -157,22 +158,25 @@ h4.contentHeading {
   margin-right: 5px;
 }
 .list {
-  max-width: 500px;
   margin: 0 auto;
 }
 .list--large li {
   margin: 1rem 0rem;
+  font-size: 1.5rem;
 }
 .list--large {
-  font-size: 1.5rem;
 }
 .wrapText {
   overflow-wrap: anywhere;
 }
 .tooltip {
   position: relative;
+  cursor: pointer;
   display: inline-block;
   // border-bottom: 1px dotted black;
+}
+.image--max-width-100 {
+  max-width: 100%;
 }
 .tooltip--centerVertically {
   margin-top: -10px;
@@ -181,6 +185,7 @@ h4.contentHeading {
 }
 .tooltiptext {
   visibility: hidden;
+  // pointer-events: none;
 }
 .tooltip .tooltiptext {
   opacity: 0;
@@ -190,7 +195,7 @@ h4.contentHeading {
   text-align: center;
   border-radius: 6px;
   padding: 8px;
-  transition: opacity 0.3s ease-in-out 0.2s;
+  transition: opacity 0.3s ease-in-out 0.3s, visibility 0s ease 0.5s;
   /* Position the tooltip */
   position: absolute;
   z-index: 1;
@@ -203,6 +208,7 @@ h4.contentHeading {
 }
 .tooltip:hover .tooltiptext,
 .tooltiptext:hover {
+  // pointer-events: unset;
   visibility: visible;
   opacity: 1;
 }
