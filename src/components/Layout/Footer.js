@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Logo from "./Logo";
 
 const Footer = () => {
@@ -12,22 +13,34 @@ const Footer = () => {
             <a>Types of phishing</a>
           </li>
           <li className="footer__item">
-            <a className="footer__link">Email</a>
+            <Link href="/" className="footer__link">
+              Email
+            </Link>
           </li>
           <li className="footer__item">
-            <a className="footer__link">Vishing</a>
+            <Link href="/vishing" className="footer__link">
+              Vishing
+            </Link>
           </li>
           <li className="footer__item">
-            <a className="footer__link">Smishing</a>
+            <Link href="/smishing" className="footer__link">
+              Smishing
+            </Link>
           </li>
           <li className="footer__item">
-            <a className="footer__link">Whaling</a>
+            <Link href="whaling" className="footer__link">
+              Whaling
+            </Link>
           </li>
           <li className="footer__item">
-            <a className="footer__link">I've been phished</a>
+            <Link href="ive-been-phished" className="footer__link">
+              I've been phished
+            </Link>
           </li>
           <li className="footer__item">
-            <a className="footer__link">Skills Test</a>
+            <Link href="skills-test" className="footer__link">
+              Skills Test
+            </Link>
           </li>
         </ul>
         <ul className="footer__items">

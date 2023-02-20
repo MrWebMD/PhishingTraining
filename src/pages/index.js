@@ -26,16 +26,18 @@ export default function Home() {
           </a>
         </span>
         <h1 className="contentHeading">Can you identify a phishing attempt?</h1>
-        <button className="btn btn--outline btn--fullWidthOnMobile filter-brightness-hover">
-          Learn more
-        </button>
+        <Link href="https://phishing.mrwebmd.com#learn-the-basics">
+          <button className="btn btn--outline btn--fullWidthOnMobile filter-brightness-hover">
+            Learn more
+          </button>
+        </Link>
       </Super>
       <main>
         <article>
           {/* <h4 className="contentHeading">Phishing Basics</h4> */}
           <section className="pageSection bg-theme-color-dark3">
             <AddressBar
-              url={`${"https:"}//${router.basePath}#learn-the-basics`}
+              url={`https://phishing.mrwebmd.com#learn-the-basics`}
               tag="learn-the-basics"
             />
             <div
@@ -206,17 +208,18 @@ export default function Home() {
           <section className="pageSection bg-theme-color-dark3">
             <div className="pageBoundary">
               <h3 className="contentHeading contentHeading--bold">
-                There was an estimated 66 billion robotic text made in 2022
-                according to the{" "}
+                There was an estimated 66 billion automated spam text messages
+                made in 2022 according to the{" "}
                 <a
                   href="https://www.robokiller.com/the-robokiller-report"
                   target="_blank"
+                  className="link link--underlined"
                 >
                   2022 Robokiller Report
                 </a>
               </h3>
               <h2 className="contentHeading">
-                Learn smishing, phishing in the form of text messages
+                Learn about smishing - phishing in the form of text messages.
               </h2>
               <Link href="/smishing">
                 <button className="btn btn--outline btn--fullWidthOnMobile filter-brightness-hover">

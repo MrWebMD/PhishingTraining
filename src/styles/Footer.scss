@@ -13,7 +13,10 @@
 }
 .footer__item {
   padding: 0.5rem;
+}
+.footer__link {
   color: $theme-color-text-mid2;
+  text-decoration: none;
 }
 .footer__item--header {
   font-weight: 600;
