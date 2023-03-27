@@ -1,10 +1,16 @@
 import Super from "@/components/Layout/Super";
+import Head from "next/head";
 
 const SkillsTest = () => {
   return (
-    <Super>
-      <h1 className="contentHeading">Test your skills</h1>
-    </Super>
+    <>
+      <Head>
+        <title>PhishED | Skills Test</title>
+      </Head>
+      <Super>
+        <h1 className="contentHeading">Test your skills</h1>
+      </Super>
+    </>
   );
 };
 

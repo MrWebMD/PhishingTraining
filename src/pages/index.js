@@ -11,6 +11,9 @@ export default function Home() {
   const router = useRouter();
   return (
     <>
+      <Head>
+        <title>PhishED | Home</title>
+      </Head>
       <Super>
         <h3 className="contentHeading contentHeading--bold">
           More than 60% of all breaches include phishing followed by stolen
@@ -145,11 +148,20 @@ export default function Home() {
                   exposure to potentially spoofed website domains.
                 </p>
                 <div className="text-align-center">
-                  <img
+                  <video
+                    src="/videos/browser-auto-complete.mp4"
+                    alt="Browser autofills website address"
+                    controls
+                    loop
+                    autoPlay
+                    muted
+                    className="image image--max-width-100"
+                  />
+                  {/* <img
                     src="/images/browser-auto-complete.gif"
                     alt="Browser autofills website address"
                     className="image image--max-width-100"
-                  />
+                  /> */}
                 </div>
                 <li>Verify the sender</li>
 
@@ -185,12 +197,22 @@ export default function Home() {
                   .
                 </p>
                 <div className="text-align-center">
-                  <img
+                  <video
+                    src="/videos/verify-the-sender.mp4"
+                    alt="Searching up an email address in google"
+                    controls
+                    loop
+                    autoPlay
+                    muted
+                    width="700px"
+                    className="image image--max-width-100"
+                  />
+                  {/* <img
                     src="/images/verify-the-sender-1.gif"
                     alt="Browser autofills website address"
                     width="700px"
                     className="image image--max-width-100"
-                  />
+                  /> */}
                 </div>
 
                 <li>Be skeptcial of impersonal messages</li>

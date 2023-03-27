@@ -45,9 +45,9 @@ const AddressBar = ({ url, tag }) => {
             <FontAwesomeIcon icon={faHashtag} onClick={copyHandler} />
           </div>
           <div className="addressBar__urlWrapper">
-            <h6 className="addressBar__typedValue" onClick={copyHandler}>
+            <p className="addressBar__typedValue" onClick={copyHandler}>
               {url}
-            </h6>
+            </p>
           </div>
         </div>
       </div>

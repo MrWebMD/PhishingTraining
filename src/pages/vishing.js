@@ -1,10 +1,16 @@
 import Super from "@/components/Layout/Super";
+import Head from "next/head";
 
 const Vishing = () => {
   return (
-    <Super>
-      <h1 className="contentHeading">Vishing</h1>
-    </Super>
+    <>
+      <Head>
+        <title>PhishED | Vishing</title>
+      </Head>
+      <Super>
+        <h1 className="contentHeading">Vishing</h1>
+      </Super>
+    </>
   );
 };
 
