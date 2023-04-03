@@ -149,7 +149,9 @@ h4.contentHeading {
 .text-align-center {
   text-align: center;
 }
-
+.margin-0-auto {
+  margin: 0 auto;
+}
 .highlight {
   background-color: $theme-color-highlight;
   color: black;
@@ -213,6 +215,25 @@ h4.contentHeading {
   opacity: 1;
 }
 
+.youtubeEmbed {
+  margin: 0 auto;
+  display: block;
+  max-width: 100%;
+  // max-width: 800px;
+  // min-height: 400px;
+}
+.audioContainer {
+  background-color: $theme-color-dark2;
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+  max-width: 400px;
+  margin: -0 auto;
+}
+.quote {
+  font-size: 1.5rem;
+  font-style: italic;
+}
 @include mobile() {
   body {
     background: $theme-color-dark4;
