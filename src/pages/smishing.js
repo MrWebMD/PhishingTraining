@@ -1,8 +1,8 @@
 import AddressBar from "@/components/Layout/AddressBar";
 import Super from "@/components/Layout/Super";
 import Head from "next/head";
+import Link from "next/link";
 import ImageGallery from "react-image-gallery";
-
 const images = [
   {
     original: "/images/smishing9.jpg",
@@ -55,7 +55,9 @@ const Smishing = () => {
         <title>PhishED | Smishing</title>
       </Head>
       <Super>
-        <h2 className="contentHeading text-align-center">Smishing Gallery</h2>
+        <h2 className="contentHeading text-align-center">
+          Millions of messages just like these are sent everyday.
+        </h2>
 
         <ImageGallery items={images} />
       </Super>
@@ -150,6 +152,18 @@ const Smishing = () => {
                   browser prefills this information normally for you.
                 </p>
               </ol>
+            </div>
+          </section>
+          <section className="pageSection">
+            <div className="pageBoundary">
+              <h2 className="contentHeading">
+                Listen to a real vishing phone call
+              </h2>
+              <Link href="/vishing">
+                <button className="btn btn--outline btn--fullWidthOnMobile filter-brightness-hover">
+                  Vishing
+                </button>
+              </Link>
             </div>
           </section>
         </article>

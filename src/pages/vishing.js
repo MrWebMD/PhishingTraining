@@ -1,7 +1,7 @@
 import AddressBar from "@/components/Layout/AddressBar";
 import Super from "@/components/Layout/Super";
 import Head from "next/head";
-
+import Link from "next/link";
 const Vishing = () => {
   return (
     <>
@@ -233,6 +233,18 @@ const Vishing = () => {
                   </a>
                 </div>
               </ol>
+            </div>
+          </section>
+          <section className="pageSection bg-theme-color-dark3">
+            <div className="pageBoundary">
+              <h2 className="contentHeading">
+                Test your new skills with this short quiz.
+              </h2>
+              <Link href="/skills-test">
+                <button className="btn btn--outline btn--fullWidthOnMobile filter-brightness-hover">
+                  skills-test
+                </button>
+              </Link>
             </div>
           </section>
         </article>

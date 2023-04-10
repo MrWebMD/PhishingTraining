@@ -143,6 +143,19 @@ export default function IveBeenPhished() {
               </div>
             </div>
           </section>
+          <section className="pageSection bg-theme-color-dark3">
+            <div className="pageBoundary">
+              <h2 className="contentHeading">
+                Learn more about what it takes to defend yourself against
+                phishing attacks
+              </h2>
+              <Link href="/">
+                <button className="btn btn--outline btn--fullWidthOnMobile filter-brightness-hover">
+                  What is phishing?
+                </button>
+              </Link>
+            </div>
+          </section>
         </article>
       </main>
     </>
