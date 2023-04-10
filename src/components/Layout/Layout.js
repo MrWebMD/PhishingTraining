@@ -2,7 +2,7 @@ import Footer from "./Footer";
 import Navigation from "./Navigation";
 import { ReactNotifications } from "react-notifications-component";
 import "react-notifications-component/dist/theme.css";
-import AOSWrapper from "../AOS";
+// import AOSWrapper from "../AOS";
 import Head from "next/head";
 
 const Layout = (props) => {
@@ -13,7 +13,7 @@ const Layout = (props) => {
       </Head>
       <ReactNotifications />
       <Navigation />
-      <AOSWrapper />
+      {/* <AOSWrapper /> */}
       {props.children}
       <Footer />
     </>

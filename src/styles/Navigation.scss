@@ -8,6 +8,16 @@
   width: 100vw;
   background-color: $theme-color-dark3;
   z-index: 9999;
+  &__overlay {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9000;
+    display: none;
+  }
   &__innerWrapper {
     display: flex;
     flex-direction: row;
@@ -50,6 +60,7 @@
   &__checkbox {
     display: none;
   }
+
   &__item {
     white-space: nowrap;
   }
@@ -82,8 +93,11 @@
       display: flex;
       justify-content: space-between;
     }
-    &__checkbox:checked ~ &__items {
+    &__checkbox:checked ~ & &__innerWrapper &__items {
       display: flex;
+    }
+    &__checkbox:checked ~ &__overlay {
+      display: block;
     }
   }
 }

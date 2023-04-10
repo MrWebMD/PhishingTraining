@@ -13,7 +13,16 @@ import Link from "next/link";
 const Navigation = () => {
   return (
     <>
+      <input
+        type="checkbox"
+        id="navigation__checkbox"
+        className="navigation__checkbox"
+      />
       <div className="navigation__spacer"></div>
+      <label
+        className="navigation__overlay"
+        htmlFor="navigation__checkbox"
+      ></label>
       <nav className="navigation">
         <div className="navigation__innerWrapper pageBoundary">
           <div className="navigation__mobileMenu">
@@ -27,11 +36,6 @@ const Navigation = () => {
             </div>
           </div>
           <div className="navigation__itemsWrapper">
-            <input
-              type="checkbox"
-              id="navigation__checkbox"
-              className="navigation__checkbox"
-            />
             <ul className="navigation__items">
               <li className="navigation__item">
                 <FontAwesomeIcon icon={faPhone} />

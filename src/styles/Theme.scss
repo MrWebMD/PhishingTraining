@@ -15,7 +15,10 @@
   font-family: "Google Sans Bold";
   src: url("./fonts/Google-Sans/Google-Sans-Bold.woff2");
 }
-
+html {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
 body {
   font-family: "Google Sans Regular";
   color: $theme-color-body-text;
@@ -23,8 +26,8 @@ body {
   background: $theme-color-dark4;
   background-size: cover;
   background-repeat: no-repeat;
-  padding: 0;
-  margin: 0;
+  // padding: 0;
+  // margin: 0;
   font-size: 1.1rem;
   overflow-x: hidden;
 }
@@ -257,6 +260,9 @@ h4.contentHeading {
 @include mobile() {
   body {
     background: $theme-color-dark4;
+  }
+  .pageSection {
+    padding: 0;
   }
   .pageBoundary {
     padding: 1rem;

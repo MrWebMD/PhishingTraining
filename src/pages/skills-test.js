@@ -203,7 +203,7 @@ const SkillsTest = ({ quizQuestions }) => {
           <>
             <h3>
               You scored a {quizScore}% ({correctAnswers}/{quizQuestions.length}
-              ). Use the Next and previous buttons to review, or retake this
+              ). Use the next and previous buttons to review, or retake this
               quiz.
             </h3>
             <button
