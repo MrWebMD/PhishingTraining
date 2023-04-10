@@ -1,3 +1,4 @@
+import AddressBar from "@/components/Layout/AddressBar";
 import Super from "@/components/Layout/Super";
 import Head from "next/head";
 
@@ -43,6 +44,10 @@ const Vishing = () => {
       <main>
         <article>
           <section className="pageSection bg-theme-color-dark3">
+            <AddressBar
+              url={`https://phishing.mrwebmd.com/vishing#social-engineering`}
+              tag="social-engineering"
+            />
             <div className="pageBoundary">
               <div className="sectionGrid__cell">
                 <h2 className="contentHeading">Who is Christopher Hagnagy?</h2>

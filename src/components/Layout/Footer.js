@@ -28,11 +28,6 @@ const Footer = () => {
             </Link>
           </li>
           <li className="footer__item">
-            <Link href="whaling" className="footer__link">
-              Whaling
-            </Link>
-          </li>
-          <li className="footer__item">
             <Link href="ive-been-phished" className="footer__link">
               I've been phished
             </Link>

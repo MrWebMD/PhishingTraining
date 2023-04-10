@@ -1,15 +1,37 @@
 .navigation {
-  display: flex;
-  flex-direction: row;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  background-color: $theme-color-dark3;
+  z-index: 9999;
+  &__innerWrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  &__spacer {
+    padding: 3rem 0rem;
+  }
+  &__mobileMenu {
+    gap: 20px;
+    align-items: center;
+  }
   &__mobileMenu,
   &__logoWrapper {
     display: flex;
     align-items: center;
     justify-content: center;
   }
+  &__logoWrapper a {
+    padding: 0;
+    margin: 0;
+  }
+
   &__itemsWrapper {
     flex-grow: 1;
   }
@@ -42,8 +64,10 @@
 
 @include mobile() {
   .navigation {
-    flex-direction: column;
-
+    padding: 0;
+    &__innerWrapper {
+      flex-direction: column;
+    }
     &__items {
       flex-direction: column;
       gap: 40px;

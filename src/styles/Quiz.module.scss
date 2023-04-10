@@ -1,0 +1,41 @@
+@import "./variables";
+@import "./mixins";
+
+.quiz {
+  min-height: 100vh;
+
+  &__slideContainer {
+  }
+}
+
+.question {
+  padding: 3rem 0rem;
+  &__disabled {
+    pointer-events: none;
+  }
+  &__grayed {
+    filter: brightness(0.7);
+  }
+  &__innerWrapper {
+    background-color: $theme-color-dark2;
+    display: flex;
+    gap: 20px;
+    padding: 1rem;
+    margin: 10px;
+    align-items: center;
+    cursor: pointer;
+  }
+  &__correct {
+    background-color: green;
+  }
+  &__incorrect {
+    background-color: red;
+  }
+  &__input {
+    width: 15px;
+    height: 15px;
+  }
+  &__label {
+    font-size: 1rem;
+  }
+}
