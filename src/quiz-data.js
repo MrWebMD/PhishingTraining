@@ -201,7 +201,7 @@ export const questions = [
     id: "36498c26-09fd-4968-9b1b-a56c2ead3f57",
     type: "simple",
     text: "What is one way you can protect yourself from vishing?",
-    answer: 3,
+    answer: 0,
     choices: [
       {
         id: "e5a8554b-8a1d-485f-8bd3-89751e69385b",
