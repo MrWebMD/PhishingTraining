@@ -222,8 +222,8 @@ const SkillsTest = ({ quizQuestions }) => {
           }}
           onSwiper={setSwiper}
           onRealIndexChange={handleSlideChange}
-          navigation={false}
-          modules={[Pagination, Navigation]}
+          modules={[Pagination]}
+          allowTouchMove={false}
           className={styles.quiz__slideContainer}
         >
           {quizQuestions.map((question, index) => {
