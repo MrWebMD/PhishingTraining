@@ -7,7 +7,7 @@
   left: 0;
   width: 100vw;
   background-color: $theme-color-dark3;
-  z-index: 9999;
+  z-index: 100;
   &__overlay {
     width: 100vw;
     height: 100vh;
@@ -15,7 +15,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 9000;
+    z-index: 99;
     display: none;
   }
   &__innerWrapper {
